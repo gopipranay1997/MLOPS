@@ -41,16 +41,15 @@ test_metadata = {
     'test_acc': test_logit
 }
 
-print(test_metadata)
 
 # Set output path
-#RESULTS_DIR = os.environ["RESULTS_DIR"]
-#test_results_file = 'test_metadata.json'
-#results_path = os.path.join(RESULTS_DIR, test_results_file)
+RESULTS_DIR = os.environ["RESULTS_DIR"]
+test_results_file = 'test_metadata.json'
+results_path = os.path.join(RESULTS_DIR, test_results_file)
 
 # Serialize and save metadata
-#with open(results_path, 'w') as outfile:
-    #json.dump(test_metadata, outfile)
+with open(results_path, 'w') as outfile:
+    json.dump(test_metadata, outfile)
 
 
 
