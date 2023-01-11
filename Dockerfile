@@ -3,14 +3,11 @@ FROM jupyter/scipy-notebook
 ENV http_proxy http://172.30.10.43:3128
 ENV https_proxy http://172.30.10.43:3128
 
-RUN pip install joblib
-
-
 USER root
 
-RUN apt-get remove libappstream3
+RUN pip install joblib
 
-RUN apt-get update && apt-get install -y jq
+RUN apt-get update && apt-get install jq
 
 RUN mkdir model raw_data processed_data results
 
